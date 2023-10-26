@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>Meu nome é: {{ name }} </p>
+        <p>Tenho {{ age }} anos</p>
+        <p> Minha idade multiplicada por 3 é: {{ age * 3 }}</p>
+        <hr>
+        <p>Um número randomico entre 0 e 1 é: {{ random() }}</p>
+        <hr>
+        <div>
+            <img height="400" v-bind:src="vueImage" alt="img"></img>
+        </div>
+        <div>
+            <input type="text" v-bind:value="name">
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue ({
+        el: "#app",
+        data:{
+            name: "Rafael",
+            age:  35,
+            vueImage:"https://gccontent.blob.core.windows.net/gccontent/blogs/legacy/wijmo/2016/10/vuejs-logo.jpg"
+        },
+        methods:{
+            random: function(){
+                return Math.random()
+            }
+        }
+
+    })
+</script>
+</html>
