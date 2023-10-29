@@ -1,4 +1,5 @@
-@import './common'; //importa arquivos da pasta common
+@import './common';
+@import './functions'; // Correção do nome do arquivo
 @import './mixins';
 @import './typography';
 @import './pokedex';

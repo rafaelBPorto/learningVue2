@@ -4,10 +4,11 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        // para todoa tag style serão importados os arquivos abaixo
+        // para todas as tags style, serão importados os arquivos abaixo
         additionalData: `
-        @import "@/styles/funtions";
-        @import "@/styles/colors";
+        @import "@/styles/functions";
+        @import '@/styles/colors/index.scss';
+        @import '@/styles/variables/index.scss';
         `,
       },
     },
