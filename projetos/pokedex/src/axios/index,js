@@ -1,0 +1,6 @@
+import Factory from './factory';
+
+const coreApiUrl = '';
+const commonInstaces = Factory(coreApiUrl);
+
+export default commonInstaces;
