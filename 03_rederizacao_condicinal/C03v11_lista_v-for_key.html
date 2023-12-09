@@ -1,0 +1,51 @@
+<html lang="pt-br"></html>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+  <p>Ver link abaixo sobre utilização do :key para Manutencao-de-Estado</p>
+  <a :href="urlManutencaoEstado" target="_blank"> Manutencao-de-Estado</a>
+  <br>
+  <button @click="addNumber">+numero</button>
+  <ul>
+    <!-- A linha abaixo é o foco do exemplo -->
+    <li v-for="(number, i) in numbers" :key="i"> {{ number }}</li>
+    <!-- Não é o ideal utilizar o index auto-gerando porém quando não tem alternativa pode ser utilizado -->
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data:{
+      numbers:[1, 2, 3],
+      urlManutencaoEstado: "https://br.vuejs.org/v2/guide/list.html#Manutencao-de-Estado"
+    },
+    methods:{
+      addNumber(){
+        this.numbers.push(this.numbers[this.numbers.length -1]+1)
+      }
+    }
+  })
+
+</script>
+
+<style>
+
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul, li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+  }
+  li{
+    height: 60px;
+  }
+</style>

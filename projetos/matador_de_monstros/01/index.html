@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster kill</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="api">
+    <!-- Jogadores -->
+    <div class="card">
+      <div class="player" v-for="j in jogadores">
+        <h1>{{j.nome}}</h1>
+        <div>
+          {{j.vida}}
+        </div>
+      </div>
+    </div>
+
+    <!-- comandos -->
+    <div class="card">
+      <template v-for="c in comandos">
+        <button @click="executarAcao(c.acao)" :style="{backgroundColor: c.cor}">{{ c.nome }}</button>
+      </template>
+    </div>
+
+    <!-- resultado -->
+    <div class="card">
+    </div>
+
+    <!-- novo jogo -->
+    <div class="card">
+    </div>
+
+    <!-- log de resultado -->
+    <div class="resultado">
+      <template v-for="resultado in logResultados">
+        <div class="resultadoMonstro">
+          {{resultado.monstro}}
+        </div>
+        <div class="resultadoJogador">
+          {{resultado.jogador}}
+        </div>
+        <br>
+      </template>
+    </div>
+  </div>
+</body>
+</html>
+<script type="module" src="./app.js"></script>

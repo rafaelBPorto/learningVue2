@@ -1,0 +1,33 @@
+<html lang="pt-br"></html>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+  <ul v-for="(pessoa, i) in pessoas">
+    <li>{{ i + 1 }} - {{pessoa.nome}} </li>
+    <ul>
+        <li>{{pessoa.idade}} anos</li>
+        <li>{{pessoa.altura}} cm</li>
+    </ul>
+  </ul>
+  <hr>
+  <ul v-for="(pessoa, i) in pessoas">
+    <li v-for="(value, key, index) in pessoa"> {{ i+1 }}.{{index+1}}) {{key}}: {{value}}</li>
+  </ul>
+  <hr>
+  <ul v-for="(pessoa) in pessoas">
+    <li>{{pessoa}}</li> </li>
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data:{
+      pessoas: [
+        { nome: "Ana", idade: 35, altura: 160 },
+        { nome: "Pedro", idade: 36, altura: 170 },]
+    }
+  })
+
+</script>

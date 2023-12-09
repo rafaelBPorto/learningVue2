@@ -1,0 +1,46 @@
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: #c7c0c0 3px 3px 5px 3px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.player{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+}
+
+.resultado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: #c7c0c0 3px 3px 5px 3px;
+  margin: 20px;
+  padding: 20px;
+}
+.resultadoMonstro, .resultadoJogador{
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: #c7c0c0 3px 3px 3px 3px;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  
+
+}
+.resultadoMonstro{
+  background-color: rgb(241, 150, 150);
+}
+
+.resultadoJogador{
+  background-color: rgb(150, 150, 240);
+}

@@ -1,0 +1,19 @@
+<html lang="pt-br"></html>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+  <ul>
+    <li v-for="cor in cores">{{ cor }}</li>
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data:{
+      cores: ['red', 'blue', 'green', 'yellow']
+    }
+  })
+
+</script>
