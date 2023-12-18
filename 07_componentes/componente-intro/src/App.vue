@@ -1,17 +1,12 @@
 <template>
 <div id="app">
   <h1>Contadores</h1>
-  {{ contador }}
+  <Contador></Contador>
 </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      contador: 0
-    }
-  }
 }
 </script>
 
