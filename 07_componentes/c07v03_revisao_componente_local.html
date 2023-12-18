@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app1">
+  <CONTADOR1></CONTADOR1>
+  <Contador1></Contador1>
+  <contador1></contador1>
+</div>
+<hr>
+<div id="app2">
+  <CONTADOR2></CONTADOR2>
+  <Contador2></Contador2>
+  <contador2></contador2>
+</div>
+
+<script>
+
+ //  Registro local de componente - o obj tem formato de um componente mais ainda não é a forma correta
+ const contador = {
+    template:`
+    <div>
+      <span>{{ contator }}</span>
+      <button @click="contator++">+</button>
+      <button @click="contator--">-</button>
+    </div>
+    `,
+    data() {
+      return {
+        contator: 0
+      }
+    }
+  }
+  
+    new Vue({
+    el: '#app1',
+    components: {
+      contador1: contador
+    }
+  })
+    new Vue({
+    el: '#app2',
+    components: {
+      contador2: contador
+    }
+  })
+</script>
